@@ -1,0 +1,45 @@
+<%- include("partials/header") -%>
+<main class="contenedor sombra">
+    <section>
+        <h2>Materias</h2> 
+            <div class="container">
+                <% if (message) { %>
+                    <p class="text-center text-danger"><%= message %></p>
+                    <% } %>
+
+                    <% if (materias) { %>
+                        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="first-name">Carrera</label>
+                                    <input type="text" class="form-control" name="carrera" id="carrera" value="<%= materias.materias_name %>" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="last-name">Profesor ID</label>
+                                    <input type="text" class="form-control" name="professor_id" id="professor_id" value="<%= materias.materias_lname %>" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="id">Descripción</label>
+                                    <input type="text" class="form-control" name="descripcion" id="descripcion" value="<%= materias.materias_id %>" required disabled title="Username can't be changed">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="email">Materia ID</label>
+                                    <input type="text" class="form-control" name="materia_id" id="materia_id" value="<%= materias.materias_email %>" required disabled title="Username can't be changed">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="email">Nombre de la Materia</label>
+                                    <input type="text" class="form-control" name="materia_nombre" id="materia_nombre" value="<%= materias.materias_email %>" required disabled title="Username can't be changed">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success float-right">Update Profesor</button>
+                        </form>
+                        <% } else { %>
+                            <p class="text-center">Profesor Not Found. Go <a href="/materias/add">here</a> to add profesor.</p>
+                            <% } %>
+                        </div>
+
+    </section>
+</main>
+</div>
+</body>
+</html>

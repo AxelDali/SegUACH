@@ -1,0 +1,31 @@
+<%- include("partials/header") -%>
+    <main class="contenedor sombra">
+    <section>
+        <h2>Alumnos</h2>
+        <div class="container">
+            <% if (message != '') { %>
+                <p class="text-center text-danger"><%= message %></p>
+                <% } %>
+                <form class="add-alumno-form" action="" method="post" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="alumno_nombre" id="alumno_nombre" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="alumno_apellido" id="alumno_apellido" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="alumno_email" id="alumno_email" placeholder="email" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <input type="text" class="form-control" name="carrera_ID" id="carrera_ID" placeholder="carrera_ID" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="boton">Add Alumno</button>
+                </form>
+            </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

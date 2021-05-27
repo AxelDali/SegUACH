@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+    <main class="contenedor sombra">
+    <section>
+        <h2>Grupos</h2>
+            <div class="container">
+                <% if (message != '') { %>
+                    <p class="text-center text-danger"><%= message %></p>
+                    <% } %>
+                    <form class="add-grupos-form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" name="materia_id" id="materia_id" placeholder="materia_id" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="boton">Add Grupo</button>
+                    </form>
+                </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

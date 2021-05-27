@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+<main class="contenedor sombra">
+    <section>
+        <h2>Grupos</h2>
+        <div class="container">
+            <% if (message) { %>
+                <p class="text-center text-danger"><%= message %></p>
+                <% } %>
+
+                <% if (grupos) { %>
+                    <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="last-name">Materia ID</label>
+                                <input type="text" class="form-control" name="materia_id" id="materia_id" value="<%= grupos.materia_id %>" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="boton">Update Grupo</button>
+                    </form>
+                    <% } else { %>
+                        <p class="text-center">Profesor Not Found. Go <a href="/grupos/add">here</a> to add profesor.</p>
+                        <% } %>
+                    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>

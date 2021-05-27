@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (professor) { %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="first-name">First Name</label>
+                    <input type="text" class="form-control" name="professor_name" id="professor_name" value="<%= professor.professor_name %>" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" name="professor_lname" id="professor_lname" value="<%= professor.professor_lname %>" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" name="professor_id" id="professor_id" value="<%= professor.professor_id %>" required disabled title="Username can't be changed">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="email">E-Mail</label>
+                    <input type="text" class="form-control" name="professor_email" id="professor_email" value="<%= professor.professor_email %>" required disabled title="Username can't be changed">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success float-right">Update Profesor</button>
+        </form>
+    <% } else { %>
+        <p class="text-center">Profesor Not Found. Go <a href="/professor/add">here</a> to add profesor.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>

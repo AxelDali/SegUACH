@@ -1,0 +1,37 @@
+<%- include("partials/header") -%>
+<main class="contenedor sombra">
+    <section>
+        <h2>Kardex</h2>
+        <div class="container">
+            <% if (message) { %>
+                <p class="text-center text-danger"><%= message %></p>
+                <% } %>
+
+                <% if (kardex) { %>
+                    <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="first-name">Calificacion</label>
+                                <input type="text" class="form-control" name="calificacion" id="calificacion" value="<%= kardex.calificacion %>" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="last-name">Materia</label>
+                                <input type="text" class="form-control" name="materia" id="materia" value="<%= kardex.materia %>" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id">Descripción</label>
+                                <input type="text" class="form-control" name="descripcion" id="descripcion" value="<%= kardex.descripcion %>" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success float-right">Update Profesor</button>
+                    </form>
+                    <% } else { %>
+                        <p class="text-center">Profesor Not Found. Go <a href="/kardex/add">here</a> to add profesor.</p>
+                        <% } %>
+                    </div>
+
+    </section>
+</main>
+</div>
+</body>
+</html>

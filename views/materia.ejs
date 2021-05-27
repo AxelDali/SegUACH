@@ -1,0 +1,55 @@
+<%- include("partials/header") -%>
+        <main class="contenedor sombra">
+    <section>
+        <h2>Materias</h2>
+        <div class="table-wrapper">
+            <% if (materias.length > 0) {%>
+                <table class="table table-hovered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Carrera</th>
+                            <th scope="col">Professor ID</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Materia ID</th>
+                            <th scope="col">Materia Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% materias.forEach((materia, index) => { %>
+                            <tr>
+                                <td><%= materia.carrera %></td>
+                                <td><%= materia.professor_id %></td>
+                                <td><%= materia.descripcion %></td>
+                                <td><%= materia.materia_id %></td>
+                                <td><%= materia.materia_nombre %></td>
+                                <td>
+                                    <a href="edit/<%= materia.materia_id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                                    <a href="delete/<%= materia.materia_id %>" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        <p class="text-center">No players found. Go <a href="/materias/add" >here</a> to add players.</p>
+                        <% } %>
+                    </div>
+                    <div class="icono__agregar">
+                        <a class="agregar" href="add/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#60368F" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <rect x="4" y="4" width="16" height="16" rx="2" />
+                                <line x1="9" y1="12" x2="15" y2="12" />
+                                <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </a>
+                    </div>
+
+    </section>
+</main>
+</div>
+<footer class="footer">
+    <p>Todos los derechos reservados. Daniel Cota y Dalí Gomez</p>
+</footer>
+</body>
+</html>

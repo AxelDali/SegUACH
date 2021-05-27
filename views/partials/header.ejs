@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="/assets/css/custom.css">-->
+    <title><%= title %></title>
+</head>
+<style>
+    :root {
+        --blanco: #ffffff;
+        --negro: #212121;
+        --modo-oscuro: #1c0d02;
+        --secundario: #60368F;
+        --secundario-claro: #C694FF;
+        --primario: #DBDA69;
+        --gris: #757575;
+        --grisclaro: #dfe9f3;
+        --fuente-principal: 3.8rem;
+    }
+
+    html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+        scroll-snap-type: y mandatory;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+    body {
+        font-size: 16px; /* 1rem = 10px */
+        font-family: 'Krub', sans-serif;
+        background-image: linear-gradient(to top,var(--secundario-claro) -20%, var(--primario) 100%);
+    }
+
+    .contenedor {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    .boton {
+        background-color: var(--secundario);
+        color: var(--blanco);
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+        font-size: 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: .5rem;
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    .sombra {
+        -webkit-box-shadow: 0px 5px 15px 2px rgba(143,143,143,0.55);
+        -moz-box-shadow: 0px 5px 15px 2px rgba(143,143,143,0.55);
+        box-shadow: 0px 5px 15px 2px rgba(143,143,143,0.55);
+        background-color: var(--blanco);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    h1 {
+    font-size: 3.8rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    h1,h2,h3 {
+        text-align: center;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: var(--fuente-principal);
+        color: var(--negro);
+        padding-right: 7.7rem;
+    }
+
+    .table-wrapper {
+        margin-top: 50px;
+    }
+    table {
+        border-collapse: separate;
+        border-spacing: 5px;
+        background: #000 url("gradient.gif") bottom left repeat-x;
+        color: #fff;
+    }
+    td, th {
+        background: #fff;
+        color: #000;
+    }
+    .nav-bg {
+        background-color: var(--secundario);
+    }
+    .navegacion_principal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navegacion_principal a {
+        display: block;
+        text-align: center;
+        padding: 1.2rem;
+        color: var(--blanco);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .navegacion_principal a:hover {
+        background-color: var(--primario);
+        color: var(--negro);
+    }
+    .hero {
+        background-image: url(../../../Img/Estadio.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 480px;
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /** Anterior **/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .contenido-hero h2,
+    .contenido-hero p {
+        color: var(--blanco);
+    }
+    .contenido-hero span {
+        font-size: 1rem;
+    }
+
+    .contenido-hero .ubicacion {
+        display: flex;
+        align-items: flex-end;
+    }
+    .agregar {
+        display: flex;
+        height: 150px;
+        width: 150px;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--primario);
+        border-radius: 50%;
+    }
+    .icono__agregar{
+        padding-left: 50rem;
+    }
+    footer {
+        text-align: center;
+    }
+</style>
+<body>
+<div class="page-wrapper">
+    <header>
+        <h1 class="titulo">Seguach</h1>
+    </header>
+    <div class="nav-bg">
+        <nav class="navegacion_principal contenedor ">
+            <a href="/">Inicio</a>
+            <a href="/alumno/index">Alumnos</a>
+            <a href="/calificacion/index">Calificaciones</a>
+            <a href="/carrera/index">Carreras</a>
+            <a href="/facultad/index">Facultades</a>
+            <a href="/grupo/index">Grupos</a>
+            <a href="/horario/index">Horario</a>
+            <a href="/kardex/index">Kardex</a>
+            <a href="/materia/index">Materias</a>
+            <a href="/professor/index">Profesores</a>
+        </nav>
+    </div>

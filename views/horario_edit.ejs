@@ -1,0 +1,36 @@
+<%- include("partials/header") -%>
+<main class="contenedor sombra">
+    <section>
+        <h2>Contacto</h2>
+        <div class="container">
+            <% if (message) { %>
+                <p class="text-center text-danger"><%= message %></p>
+                <% } %>
+
+                <% if (horario) { %>
+                    <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="first-name">Materia ID</label>
+                                <input type="text" class="form-control" name="materia_id" id="materia_id value="<%= horario.horario_name %>" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="last-name">Grupo ID</label>
+                                <input type="text" class="form-control" name="grupo_id" id="grupo_id" value="<%= horario.horario_lname %>" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="id">Lapso de Tiempo</label>
+                                <input type="text" class="form-control" name="lapso" id="lapso" value="<%= horario.horario_id %>" required disabled title="Username can't be changed">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success float-right">Update Profesor</button>
+                    </form>
+                    <% } else { %>
+                        <p class="text-center">Profesor Not Found. Go <a href="/horario/add">here</a> to add profesor.</p>
+                        <% } %>
+                    </div>
+    </section>
+</main>
+</div>
+</body>
+</html>
